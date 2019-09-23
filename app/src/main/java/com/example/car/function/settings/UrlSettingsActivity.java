@@ -40,6 +40,7 @@ public class UrlSettingsActivity extends AppBaseActivity {
 //        if (savedInstanceState != null) {
 //            shouldLoadUrl = savedInstanceState.getBoolean(KEY_SHOULD_LOAD_URL);
 //        }
+
         mUrlSettingsPresenter = new UrlSettingsPresenter(urlSettingsFragment, false);
     }
 
