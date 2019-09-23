@@ -1,3 +1,8 @@
 
 ViewPager 详解（五）-----使用Fragment实现ViewPager滑动
 https://blog.csdn.net/harvic880925/article/details/38660861
+
+
+Fileutils 工具类3 已经满足需求
+如果需要获取文件路径 参考FileUtils
+获取读取文件的一些资料参考FilUtils2
