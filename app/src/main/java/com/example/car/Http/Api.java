@@ -26,6 +26,7 @@ public class Api {
 
     private Api() {
         Retrofit retrofit = new Retrofit.Builder()
+                .client(new OkHttpClientBuilder().build())
                 .baseUrl(baseUrl)
                 .addConverterFactory(GsonConverterFactory.create())//请求的结果转为实体类
                 //适配RxJava2.0,RxJava1.x则为RxJavaCallAdapterFactory.create()
