@@ -5,7 +5,6 @@ import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.car.utilcode.util.Utils;
 
 /**
  * <pre>

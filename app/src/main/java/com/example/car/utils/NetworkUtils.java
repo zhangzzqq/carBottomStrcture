@@ -9,12 +9,8 @@ import android.net.wifi.WifiManager;
 import android.os.Build;
 import android.telephony.TelephonyManager;
 import android.text.format.Formatter;
-import android.util.Log;
 
 import androidx.annotation.RequiresPermission;
-
-import com.example.car.utilcode.util.ShellUtils;
-import com.example.car.utilcode.util.Utils;
 
 import java.lang.reflect.Method;
 import java.net.InetAddress;
@@ -101,18 +97,19 @@ public final class NetworkUtils {
      */
     @RequiresPermission(INTERNET)
     public static boolean isAvailableByPing(String ip) {
-        if (ip == null || ip.length() <= 0) {
-            ip = "223.5.5.5";// default ping ip
-        }
-        ShellUtils.CommandResult result = ShellUtils.execCmd(String.format("ping -c 1 %s", ip), false);
-        boolean ret = result.result == 0;
-        if (result.errorMsg != null) {
-            Log.d("NetworkUtils", "isAvailableByPing() called" + result.errorMsg);
-        }
-        if (result.successMsg != null) {
-            Log.d("NetworkUtils", "isAvailableByPing() called" + result.successMsg);
-        }
-        return ret;
+//        if (ip == null || ip.length() <= 0) {
+//            ip = "223.5.5.5";// default ping ip
+//        }
+//        ShellUtils.CommandResult result = ShellUtils.execCmd(String.format("ping -c 1 %s", ip), false);
+//        boolean ret = result.result == 0;
+//        if (result.errorMsg != null) {
+//            Log.d("NetworkUtils", "isAvailableByPing() called" + result.errorMsg);
+//        }
+//        if (result.successMsg != null) {
+//            Log.d("NetworkUtils", "isAvailableByPing() called" + result.successMsg);
+//        }
+//        return ret;
+        return false;
     }
 
     /**
@@ -486,5 +483,19 @@ public final class NetworkUtils {
         WifiManager wm = (WifiManager) Utils.getApp().getSystemService(Context.WIFI_SERVICE);
         //noinspection ConstantConditions
         return Formatter.formatIpAddress(wm.getDhcpInfo().serverAddress);
+    }
+
+    public static boolean isNetConnected(Context context) {
+        ConnectivityManager connectivity = (ConnectivityManager) context
+                .getSystemService(Context.CONNECTIVITY_SERVICE);
+        if (connectivity != null) {
+            NetworkInfo info = connectivity.getActiveNetworkInfo();
+            if (info != null && info.isConnected()) {
+                if (info.getState() == NetworkInfo.State.CONNECTED) {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 }

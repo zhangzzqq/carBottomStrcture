@@ -17,7 +17,6 @@ import androidx.annotation.IntRange;
 import androidx.annotation.RequiresApi;
 import androidx.collection.SimpleArrayMap;
 
-import com.example.car.utilcode.util.Utils;
 
 import org.json.JSONArray;
 import org.json.JSONException;

@@ -2,7 +2,6 @@ package com.example.car.utils;
 
 import android.os.Environment;
 
-import com.example.car.utilcode.util.Utils;
 
 import java.io.File;
 

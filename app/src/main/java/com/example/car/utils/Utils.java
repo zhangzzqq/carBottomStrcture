@@ -12,7 +12,6 @@ import android.util.DisplayMetrics;
 
 import androidx.core.content.FileProvider;
 
-import com.example.car.utilcode.util.PermissionUtils;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
@@ -278,15 +277,15 @@ public final class Utils {
         }
 
         private void setTopActivity(final Activity activity) {
-            if (activity.getClass() == PermissionUtils.PermissionActivity.class) return;
-            if (mActivityList.contains(activity)) {
-                if (!mActivityList.getLast().equals(activity)) {
-                    mActivityList.remove(activity);
-                    mActivityList.addLast(activity);
-                }
-            } else {
-                mActivityList.addLast(activity);
-            }
+//            if (activity.getClass() == PermissionUtils.PermissionActivity.class) return;
+//            if (mActivityList.contains(activity)) {
+//                if (!mActivityList.getLast().equals(activity)) {
+//                    mActivityList.remove(activity);
+//                    mActivityList.addLast(activity);
+//                }
+//            } else {
+//                mActivityList.addLast(activity);
+//            }
         }
 
         Activity getTopActivity() {
