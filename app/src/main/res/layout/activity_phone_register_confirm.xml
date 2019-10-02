@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:id="@+id/fl_left"
+            android:layout_width="50dp"
+            android:layout_height="50dp">
+
+
+            <ImageView
+                android:id="@+id/iv_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </FrameLayout>
+
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="手机号快捷注册"
+            android:textColor="#ff222222"
+            android:textSize="18sp" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="22dp"
+        android:text="我们将以短信的形式将验证码发送给你，请注意及时查收"
+        android:textColor="#ff222222"
+        android:textSize="15sp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="22dp"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_user_name"
+                android:layout_width="260dp"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:hint="请输入验证码"
+                android:maxLength="6"
+                android:textColorHint="@color/hint_font_color"
+                android:textColor="@color/login_text_color"
+                android:singleLine="true"
+                android:textSize="15sp" />
+
+
+            <View
+                android:layout_weight="1"
+                android:layout_width="1dp"
+                android:layout_height="0dp"/>
+            <TextView
+                android:id="@+id/tv_get_verfication"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/bg_normal_login"
+                android:gravity="center"
+                android:text="获取验证码"
+                android:textColor="#ff4a8bd2"
+                android:textSize="12sp"
+
+                />
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/bg_line" />
+
+
+        <EditText
+            android:id="@+id/et_user_password"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@null"
+            android:hint="请输入密码"
+            android:singleLine="true"
+            android:inputType="textPassword"
+            android:maxLength="11"
+            android:textColor="@color/login_text_color"
+            android:textColorHint="@color/hint_font_color"
+            android:textSize="15sp" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/bg_line" />
+
+        <TextView
+            android:id="@+id/tv_phone_register_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/bg_selecter_login"
+            android:gravity="center"
+            android:text="确认"
+            android:textColor="#ffffffff"
+            android:textSize="15sp" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
